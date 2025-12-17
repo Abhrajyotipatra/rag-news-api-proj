@@ -305,7 +305,7 @@ For pgAdmin / host connections you may expose Postgres via a port mapping (e.g. 
 ### 7.3 Run with Docker (recommended)
 
 1. Clone the repository
-git clone https://github.com/your-username/rag-news-api.git
+git clone https://github.com/Abhrajyotipatra/rag-news-api-proj
 cd rag-news-api
 
 2. Create .env file
