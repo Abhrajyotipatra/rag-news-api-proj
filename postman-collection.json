@@ -1,0 +1,51 @@
+{
+  "info": {
+    "name": "RAG News Intelligence API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Create Session",
+      "request": {
+        "method": "POST",
+        "url": "http://localhost:3000/api/session"
+      }
+    },
+    {
+      "name": "Ingest Articles",
+      "request": {
+        "method": "POST",
+        "url": "http://localhost:3000/api/ingest",
+        "body": {
+          "mode": "raw",
+          "raw": "{}"
+        }
+      }
+    },
+    {
+      "name": "Send Query",
+      "request": {
+        "method": "POST",
+        "url": "http://localhost:3000/api/chat",
+        "body": {
+          "mode": "raw",
+          "raw": "{\"sessionId\": \"YOUR_SESSION_ID\", \"query\": \"Tell me about AI\"}"
+        }
+      }
+    },
+    {
+      "name": "Get History",
+      "request": {
+        "method": "GET",
+        "url": "http://localhost:3000/api/history/:sessionId"
+      }
+    },
+    {
+      "name": "Delete History",
+      "request": {
+        "method": "DELETE",
+        "url": "http://localhost:3000/api/history/:sessionId"
+      }
+    }
+  ]
+}
